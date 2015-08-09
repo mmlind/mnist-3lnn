@@ -11,7 +11,7 @@
  *
  * @see [Simple 3-Layer Neural Network for MNIST Handwriting Recognition](http://mmlind.github.io/Simple_3-Layer_Neural_Network_for_MNIST_Handwriting_Recognition/)
  * @see http://yann.lecun.com/exdb/mnist/
- * @version [Github Project Page](http://github.com/mmlind/mnist-1lnn/)
+ * @version [Github Project Page](http://github.com/mmlind/mnist-3lnn/)
  * @author [Matt Lind](http://mmlind.github.io)
  * @date August 2015
  *

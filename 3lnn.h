@@ -21,7 +21,7 @@ typedef enum ActFctType {SIGMOID, TANH} ActFctType;
 
 
 /**
- * @brief Flexible data structure containing defined number of values
+ * @brief Dynamic data structure containing defined number of values
  */
 
 struct Vector{
@@ -33,7 +33,7 @@ struct Vector{
 
 
 /**
- * @brief The core unit of the neural network (neuron) with definable number of weights (connections/synapses)
+ * @brief Dynamic data structure modeling a neuron with a variable number of connections/weights
  */
 
 struct Node{
@@ -47,7 +47,7 @@ struct Node{
 
 
 /**
- * @brief A variable-sized data structure holding a definable number of nodes that form a layer
+ * @brief Dynamic data structure holding a definable number of nodes that form a layer
  */
 
 struct Layer{
@@ -57,7 +57,7 @@ struct Layer{
 
 
 /**
- * @brief A variable-sized data structure holding the whole network
+ * @brief Dynamic data structure holding the whole network
  */
 
 struct Network{
