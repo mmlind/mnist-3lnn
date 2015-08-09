@@ -66,8 +66,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a30f07d837cc0a1091e998ca7cddeb2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="struct_vector.html" title="Flexible data structure containing defined number of values. ">Vector</a> holding the image pixels of a given MNIST image.  <a href="#a30f07d837cc0a1091e998ca7cddeb2f4">More...</a><br /></td></tr>
 <tr class="separator:a30f07d837cc0a1091e998ca7cddeb2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33601129c748473d698260d37d548ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a33601129c748473d698260d37d548ec8">trainNetwork</a> (<a class="el" href="struct_network.html">Network</a> *nn)</td></tr>
+<tr class="memdesc:a33601129c748473d698260d37d548ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Training the network by processing the MNIST training set and updating the weights.  <a href="#a33601129c748473d698260d37d548ec8">More...</a><br /></td></tr>
 <tr class="separator:a33601129c748473d698260d37d548ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fb2b4dca6c559742730b6da582229cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6fb2b4dca6c559742730b6da582229cf">testNetwork</a> (<a class="el" href="struct_network.html">Network</a> *nn)</td></tr>
+<tr class="memdesc:a6fb2b4dca6c559742730b6da582229cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing the trained network by processing the MNIST testing set WITHOUT updating weights.  <a href="#a6fb2b4dca6c559742730b6da582229cf">More...</a><br /></td></tr>
 <tr class="separator:a6fb2b4dca6c559742730b6da582229cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
 <tr class="separator:ac0f2228420376f4db7e1274f2b41667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,7 +126,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Main function to run MNIST-1LNN </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00144">144</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00153">153</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -142,7 +144,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00096">96</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Testing the trained network by processing the MNIST testing set WITHOUT updating weights. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00106">106</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -160,7 +170,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00051">51</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Training the network by processing the MNIST training set and updating the weights. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00056">56</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>

@@ -3,13 +3,13 @@
  *
  * @mainpage MNIST 3-Layer Neural Network
  *
- * @brief Simple feed-forward neural network with 2 layers of nodes (1 hidden layer, 1 output layer)
- * using Sigmoid activation function and back propagation to classify MNIST handwritten digit images.
+ * @brief Simple feed-forward neural network with 3 layers of nodes (input, hidden, output)
+ * using Sigmoid or Tanh activation function and back propagation to classify MNIST handwritten digit images.
  *
- * @details Simple feed-forward neural network with 2 layers of nodes (1 hidden layer, 1 output layer)
- * using Sigmoid activation function and back propagation to classify MNIST handwritten digit images.
+ * @details Simple feed-forward neural network with 3 layers of nodes (input, hidden, output)
+ * using Sigmoid or Tanh activation function and back propagation to classify MNIST handwritten digit images.
  *
- * @see [Simple 1-Layer Neural Network for MNIST Handwriting Recognition](http://mmlind.github.io/Simple_1-Layer_Neural_Network_for_MNIST_Handwriting_Recognition/)
+ * @see [Simple 3-Layer Neural Network for MNIST Handwriting Recognition](http://mmlind.github.io/Simple_3-Layer_Neural_Network_for_MNIST_Handwriting_Recognition/)
  * @see http://yann.lecun.com/exdb/mnist/
  * @version [Github Project Page](http://github.com/mmlind/mnist-1lnn/)
  * @author [Matt Lind](http://mmlind.github.io)
@@ -48,6 +48,11 @@ Vector *getVectorFromImage(MNIST_Image *img){
 
 
 
+/**
+ * @brief Training the network by processing the MNIST training set and updating the weights
+ * @param nn A pointer to the NN
+ */
+
 void trainNetwork(Network *nn){
     
     // open MNIST files
@@ -80,7 +85,7 @@ void trainNetwork(Network *nn){
         
         // Display progress during training
         displayTrainingProgress(imgCount, errCount, 3,5);
-//        displayImage(&img, lbl, classification, 7,6);
+        displayImage(&img, lbl, classification, 7,6);
         
     }
     
@@ -92,6 +97,11 @@ void trainNetwork(Network *nn){
 
 
 
+
+/**
+ * @brief Testing the trained network by processing the MNIST testing set WITHOUT updating weights
+ * @param nn A pointer to the NN
+ */
 
 void testNetwork(Network *nn){
     
@@ -122,7 +132,7 @@ void testNetwork(Network *nn){
         
         // Display progress during testing
         displayTestingProgress(imgCount, errCount, 5,5);
-//        displayImage(&img, lbl, classification, 7,6);
+        displayImage(&img, lbl, classification, 7,6);
         
     }
     
@@ -131,7 +141,6 @@ void testNetwork(Network *nn){
     fclose(labelFile);
     
 }
-
 
 
 
@@ -148,7 +157,7 @@ int main(int argc, const char * argv[]) {
     
     // clear screen of terminal window
     clearScreen();
-    printf("    MNIST-2LNN: a simple 2-layer neural network processing the MNIST handwritten digit images\n\n");
+    printf("    MNIST-3LNN: a simple 3-layer neural network processing the MNIST handwritten digit images\n\n");
     
     // Create neural network using a manually allocated memory space
     Network *nn = createNetwork(MNIST_IMG_HEIGHT*MNIST_IMG_WIDTH, 20, 10);

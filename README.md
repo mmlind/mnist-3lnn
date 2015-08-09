@@ -1,5 +1,5 @@
-# mnist-2lnn
-A simple 1-layer neural network to recognize handwritten single digit numbers from the MNIST image files.
+# mnist-3lnn
+A simple 3-layer neural network to recognize handwritten single digit numbers from the MNIST image files.
 
 
 ### Compile and run source code
@@ -13,13 +13,13 @@ $ make
 in the project directory. The binary will be created inside the `/bin` folder and can be executed via
 
 ```
-$ ./bin/mnist-1lnn
+$ ./bin/mnist-3lnn
 ```
 
 ### Documentation
 
 The  `/doc` folder contains a doxygen configuration file. 
-When you run it with doxygen it will create updated [HTML documentation](https://rawgit.com/mmlind/mnist-1lnn/master/doc/html/index.html) in the `/doc/html` folder.
+When you run it with doxygen it will create updated [HTML documentation](https://rawgit.com/mmlind/mnist-3lnn/master/doc/html/index.html) in the `/doc/html` folder.
 
 ### Screenshots
 
