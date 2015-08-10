@@ -123,6 +123,9 @@ void updateNodeWeights(Network *nn, LayerType ltype, int id, double error){
         sbptr += prevLayerNodeSize;
     }
     
+    // update bias weight
+    updateNode->bias += (nn->learningRate * 1 * error);
+    
 }
 
 
@@ -260,8 +263,10 @@ void calcNodeOutput(Network *nn, LayerType ltype, int id){
         prevLayerNodeSize = nn->hidNodeSize;
     }
     
-    calcNode->output = 0;
     uint8_t *sbptr = (uint8_t*) prevLayer->nodes;
+    
+    // Start by adding the bias
+    calcNode->output = calcNode->bias;
     
     for (int i=0; i<prevLayer->ncount;i++){
         Node *prevLayerNode = (Node*)sbptr;
@@ -333,6 +338,7 @@ void feedInput(Network *nn, Vector *v) {
 
 /**
  * @details Creates an input layer and sets all weights to random values [0-1]
+ * @param inpCount Number of nodes in the input layer
  */
 
 Layer *createInputLayer(int inpCount){
@@ -365,6 +371,8 @@ Layer *createInputLayer(int inpCount){
 
 /**
  * @details Creates a layer and sets all weights to random values [0-1]
+ * @param nodeCount Number of nodes
+ * @param weightCount Number of weights per node
  */
 
 Layer *createLayer(int nodeCount, int weightCount){
@@ -376,20 +384,15 @@ Layer *createLayer(int nodeCount, int weightCount){
     
     // create a detault node
     Node *dn = (Node*)malloc(sizeof(Node) + ((weightCount)*sizeof(double)));
-    dn->bias = 1;
+    dn->bias = 0;
     dn->output = 0;
     dn->wcount = weightCount;
-    for (int o=0;o<weightCount;o++) {
-        dn->weights[o] = (0.5*(rand()/(double)(RAND_MAX)));
-        if (o%2) dn->weights[o] = -dn->weights[o];  // make half of the numbers negative
-    }
+    for (int o=0;o<weightCount;o++) dn->weights[o] = 0; // will be initialized later
     
     uint8_t *sbptr = (uint8_t*) l->nodes;     // single byte pointer
     
     // copy the default cell to all cell positions in the layer
-    for (int i=0;i<nodeCount;i++){
-        memcpy(sbptr+(i*nodeSize),dn,nodeSize);
-    }
+    for (int i=0;i<nodeCount;i++) memcpy(sbptr+(i*nodeSize),dn,nodeSize);
     
     free(dn);
     
@@ -438,6 +441,7 @@ void initNetwork(Network *nn, int inpCount, int hidCount, int outCount){
 
 /**
  * @brief Sets the default network parameters (which can be overwritten/changed)
+ * @param nn A pointer to the NN
  */
 
 void setNetworkDefaults(Network *nn){
@@ -446,11 +450,48 @@ void setNetworkDefaults(Network *nn){
     nn->hidLayerActType = SIGMOID;
     nn->outLayerActType = SIGMOID;
     
-    nn->learningRate    = 0.5;
-    
+    nn->learningRate    = 0.004;    // TANH 78.0%
+    nn->learningRate    = 0.2;      // SIGMOID 91.5%
     
 }
 
+
+
+
+/**
+ * @brief Initializes a layer's weights with random values
+ * @param nn A pointer to the NN
+ * @param ltype Defining what layer to initialize
+ */
+
+void initWeights(Network *nn, LayerType ltype){
+    
+    int nodeSize = 0;
+    if (ltype==HIDDEN) nodeSize=nn->hidNodeSize;
+                  else nodeSize=nn->outNodeSize;
+    
+    Layer *l = getLayer(nn, ltype);
+    
+    uint8_t *sbptr = (uint8_t*) l->nodes;
+    
+    for (int o=0; o<l->ncount;o++){
+    
+        Node *n = (Node *)sbptr;
+        
+        for (int i=0; i<n->wcount; i++){
+            n->weights[i] = 0.7*(rand()/(double)(RAND_MAX));
+            if (i%2) n->weights[i] = -n->weights[i];  // make half of the weights negative
+
+        }
+        
+        // init bias weight
+        n->bias =  rand()/(double)(RAND_MAX);
+        if (o%2) n->bias = -n->bias;  // make half of the bias weights negative
+        
+        sbptr += nodeSize;
+    }
+    
+}
 
 
 
@@ -493,6 +534,10 @@ Network *createNetwork(int inpCount, int hidCount, int outCount){
     
     // Setting defaults
     setNetworkDefaults(nn);
+    
+    // Init connection weights with random values
+    initWeights(nn, HIDDEN);
+    initWeights(nn, OUTPUT);
     
     return nn;
 }

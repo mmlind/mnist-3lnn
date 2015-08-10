@@ -97,7 +97,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ab3aab148c4bc1bc374291e64edbf1e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds input layer values forward to hidden to output layer (calculation and activation fct)  <a href="#ab3aab148c4bc1bc374291e64edbf1e2d">More...</a><br /></td></tr>
 <tr class="separator:ab3aab148c4bc1bc374291e64edbf1e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498c47a729c9e9a8e3996dc4cc01a257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8c.html#a498c47a729c9e9a8e3996dc4cc01a257">feedInput</a> (<a class="el" href="struct_network.html">Network</a> *nn, <a class="el" href="struct_vector.html">Vector</a> *v)</td></tr>
-<tr class="memdesc:a498c47a729c9e9a8e3996dc4cc01a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds some <a class="el" href="struct_vector.html" title="Flexible data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN.  <a href="#a498c47a729c9e9a8e3996dc4cc01a257">More...</a><br /></td></tr>
+<tr class="memdesc:a498c47a729c9e9a8e3996dc4cc01a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds some <a class="el" href="struct_vector.html" title="Dynamic data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN.  <a href="#a498c47a729c9e9a8e3996dc4cc01a257">More...</a><br /></td></tr>
 <tr class="separator:a498c47a729c9e9a8e3996dc4cc01a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a818eab72515189f2b28a24cc8a6e1566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8c.html#a818eab72515189f2b28a24cc8a6e1566">createInputLayer</a> (int inpCount)</td></tr>
 <tr class="separator:a818eab72515189f2b28a24cc8a6e1566"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +109,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a41083d0f62971b92d2faa15b05fc5476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8c.html#a41083d0f62971b92d2faa15b05fc5476">setNetworkDefaults</a> (<a class="el" href="struct_network.html">Network</a> *nn)</td></tr>
 <tr class="memdesc:a41083d0f62971b92d2faa15b05fc5476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default network parameters (which can be overwritten/changed)  <a href="#a41083d0f62971b92d2faa15b05fc5476">More...</a><br /></td></tr>
 <tr class="separator:a41083d0f62971b92d2faa15b05fc5476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fc6f366cf99923adee0e2193f3c2ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8c.html#a39fc6f366cf99923adee0e2193f3c2ca">initWeights</a> (<a class="el" href="struct_network.html">Network</a> *nn, <a class="el" href="3lnn_8h.html#a56943a0946e5f15e5e58054b8e7a04a4">LayerType</a> ltype)</td></tr>
+<tr class="memdesc:a39fc6f366cf99923adee0e2193f3c2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a layer's weights with random values.  <a href="#a39fc6f366cf99923adee0e2193f3c2ca">More...</a><br /></td></tr>
+<tr class="separator:a39fc6f366cf99923adee0e2193f3c2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ef90dd1bca3236fd1df89ed8c26fb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_network.html">Network</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8c.html#a11ef90dd1bca3236fd1df89ed8c26fb6">createNetwork</a> (int inpCount, int hidCount, int outCount)</td></tr>
 <tr class="memdesc:a11ef90dd1bca3236fd1df89ed8c26fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dynamically-sized, 3-layer (INTPUT, HIDDEN, OUTPUT) neural network.  <a href="#a11ef90dd1bca3236fd1df89ed8c26fb6">More...</a><br /></td></tr>
 <tr class="separator:a11ef90dd1bca3236fd1df89ed8c26fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +166,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00221">221</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00224">224</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -200,7 +203,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00137">137</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00140">140</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -237,7 +240,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00203">203</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00206">206</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -274,7 +277,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00175">175</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00178">178</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -311,7 +314,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00283">283</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00288">288</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -355,7 +358,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00246">246</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00249">249</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -372,9 +375,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates an input layer and sets all weights to random values [0-1] </p>
+<p>Creates an input layer and sets all weights to random values [0-1] </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inpCount</td><td>Number of nodes in the input layer </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00338">338</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00344">344</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -401,9 +409,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a layer and sets all weights to random values [0-1] </p>
+<p>Creates a layer and sets all weights to random values [0-1] </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeCount</td><td>Number of nodes </td></tr>
+    <tr><td class="paramname">weightCount</td><td>Number of weights per node </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00370">370</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00378">378</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -447,7 +461,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00464">464</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00505">505</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -473,7 +487,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00301">301</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00306">306</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -501,7 +515,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Feeds some <a class="el" href="struct_vector.html" title="Flexible data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN. </p>
+<p>Feeds some <a class="el" href="struct_vector.html" title="Dynamic data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
@@ -510,7 +524,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00315">315</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00320">320</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -617,7 +631,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00508">508</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00553">553</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -697,7 +711,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00410">410</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00413">413</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a39fc6f366cf99923adee0e2193f3c2ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initWeights </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_network.html">Network</a> *&#160;</td>
+          <td class="paramname"><em>nn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="3lnn_8h.html#a56943a0946e5f15e5e58054b8e7a04a4">LayerType</a>&#160;</td>
+          <td class="paramname"><em>ltype</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a layer's weights with random values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
+    <tr><td class="paramname">ltype</td><td>Defining what layer to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00467">467</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -716,8 +767,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the default network parameters (which can be overwritten/changed) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00443">443</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00447">447</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>

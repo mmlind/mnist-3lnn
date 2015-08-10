@@ -63,16 +63,16 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vector.html">Vector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flexible data structure containing defined number of values.  <a href="struct_vector.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data structure containing defined number of values.  <a href="struct_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core unit of the neural network (neuron) with definable number of weights (connections/synapses)  <a href="struct_node.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data structure modeling a neuron with a variable number of connections/weights.  <a href="struct_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_layer.html">Layer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variable-sized data structure holding a definable number of nodes that form a layer.  <a href="struct_layer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data structure holding a definable number of nodes that form a layer.  <a href="struct_layer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_network.html">Network</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variable-sized data structure holding the whole network.  <a href="struct_network.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data structure holding the whole network.  <a href="struct_network.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -108,7 +108,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a11ef90dd1bca3236fd1df89ed8c26fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dynamically-sized, 3-layer (INTPUT, HIDDEN, OUTPUT) neural network.  <a href="#a11ef90dd1bca3236fd1df89ed8c26fb6">More...</a><br /></td></tr>
 <tr class="separator:a11ef90dd1bca3236fd1df89ed8c26fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498c47a729c9e9a8e3996dc4cc01a257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8h.html#a498c47a729c9e9a8e3996dc4cc01a257">feedInput</a> (<a class="el" href="struct_network.html">Network</a> *nn, <a class="el" href="struct_vector.html">Vector</a> *v)</td></tr>
-<tr class="memdesc:a498c47a729c9e9a8e3996dc4cc01a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds some <a class="el" href="struct_vector.html" title="Flexible data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN.  <a href="#a498c47a729c9e9a8e3996dc4cc01a257">More...</a><br /></td></tr>
+<tr class="memdesc:a498c47a729c9e9a8e3996dc4cc01a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds some <a class="el" href="struct_vector.html" title="Dynamic data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN.  <a href="#a498c47a729c9e9a8e3996dc4cc01a257">More...</a><br /></td></tr>
 <tr class="separator:a498c47a729c9e9a8e3996dc4cc01a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3aab148c4bc1bc374291e64edbf1e2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="3lnn_8h.html#ab3aab148c4bc1bc374291e64edbf1e2d">feedForwardNetwork</a> (<a class="el" href="struct_network.html">Network</a> *nn)</td></tr>
 <tr class="memdesc:ab3aab148c4bc1bc374291e64edbf1e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds input layer values forward to hidden to output layer (calculation and activation fct)  <a href="#ab3aab148c4bc1bc374291e64edbf1e2d">More...</a><br /></td></tr>
@@ -284,7 +284,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00203">203</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00206">206</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00464">464</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00505">505</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -354,7 +354,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00301">301</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00306">306</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Feeds some <a class="el" href="struct_vector.html" title="Flexible data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN. </p>
+<p>Feeds some <a class="el" href="struct_vector.html" title="Dynamic data structure containing defined number of values. ">Vector</a> data into the INPUT layer of the NN. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nn</td><td>A pointer to the NN </td></tr>
@@ -391,7 +391,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00315">315</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00320">320</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00508">508</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="3lnn_8c_source.html#l00553">553</a> of file <a class="el" href="3lnn_8c_source.html">3lnn.c</a>.</p>
 
 </div>
 </div>

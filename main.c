@@ -85,7 +85,7 @@ void trainNetwork(Network *nn){
         
         // Display progress during training
         displayTrainingProgress(imgCount, errCount, 3,5);
-        displayImage(&img, lbl, classification, 7,6);
+//        displayImage(&img, lbl, classification, 7,6);
         
     }
     
@@ -132,7 +132,7 @@ void testNetwork(Network *nn){
         
         // Display progress during testing
         displayTestingProgress(imgCount, errCount, 5,5);
-        displayImage(&img, lbl, classification, 7,6);
+//        displayImage(&img, lbl, classification, 7,6);
         
     }
     
