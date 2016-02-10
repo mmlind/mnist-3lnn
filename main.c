@@ -86,7 +86,7 @@ void trainNetwork(Network *nn){
         // Display progress during training
         displayTrainingProgress(imgCount, errCount, 3,5);
 //        displayImage(&img, lbl, classification, 7,6);
-        
+
     }
     
     // Close files
@@ -161,7 +161,10 @@ int main(int argc, const char * argv[]) {
     
     // Create neural network using a manually allocated memory space
     Network *nn = createNetwork(MNIST_IMG_HEIGHT*MNIST_IMG_WIDTH, 20, 10);
-
+    
+//    displayNetworkWeightsForDebugging(nn);
+//    exit(1);
+    
     // Training the network by adjusting the weights based on error using the  TRAINING dataset
     trainNetwork(nn);
     

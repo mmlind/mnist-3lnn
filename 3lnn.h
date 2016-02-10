@@ -130,3 +130,5 @@ int getNetworkClassification(Network *nn);
 
 
 
+void displayNetworkWeightsForDebugging(Network *nn);
+
